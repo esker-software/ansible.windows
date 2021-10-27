@@ -280,6 +280,7 @@
     that:
     - remote_copy_folder_to_folder is changed
     - remote_copy_folder_to_folder.operation == 'folder_copy'
+    - remote_copy_folder_to_folder.size == 360
     - remote_copy_folder_to_folder_actual.examined == 11
     - remote_copy_folder_to_folder_actual.matched == 6
     - remote_copy_folder_to_folder_actual.files[0].filename == 'source'
